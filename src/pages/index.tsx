@@ -582,10 +582,9 @@ export default function Home() {
               </Text>
               <Flex w={"100%"}>
                 <InputGroup size="lg">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<SearchIcon color="gray.300" />}
-                  />
+                  <InputLeftElement pointerEvents="none">
+                    <SearchIcon color="gray.300" />
+                  </InputLeftElement>
                   <Input
                     focusBorderColor="#2548e5"
                     value={bns}
