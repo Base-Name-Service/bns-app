@@ -481,8 +481,8 @@ export default function Home() {
                       align={"center"}
                       justify="center"
                     >
-                      {/* <Text fontSize={"4xl"}>🎉</Text> */}
-                      <Image h={"60px"} src="/yay.png" alt="Base" />
+                      <Text fontSize={"4xl"}>🎉</Text>
+                      {/* <Image h={"60px"} src="/yay.png" alt="Base" /> */}
                     </Flex>
                   </Flex>
                 </Flex>
