@@ -318,7 +318,8 @@ export default function Home() {
                   <Flex>
                     <Text align={"center"} fontSize={"xl"} marginLeft="5px">
                       {address?.slice(0, 6)}...{address?.slice(-4)} wallet is
-                      connected. Exit this window and click on 'Claim' again.
+                      connected. Exit this window and click on &apos;Claim&apos;
+                      again.
                       {/* Thanks for connecPlease connect your wallet to claim your{" "}
                     <Badge colorScheme="blue">{bns}.base</Badge> web3 name. */}
                     </Text>
@@ -400,7 +401,7 @@ export default function Home() {
                 {switchNetwork && baseGoerli.id === chain?.id && (
                   <Text align={"center"} fontSize={"xl"}>
                     Switched to {baseGoerli.name} network. Exit this window and
-                    click on 'Claim' again.
+                    click on &apos;Claim&apos; again.
                   </Text>
                 )}
 
