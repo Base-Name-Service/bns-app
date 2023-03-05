@@ -191,7 +191,10 @@ export default function Home() {
     <>
       <Head>
         <title>Base Name Service</title>
-        <meta name="description" content="Base Name Service" />
+        <meta
+          name="description"
+          content="Onchain is the next online. Decentralized naming for next billion+ users. Claim your .base name today."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
