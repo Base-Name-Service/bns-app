@@ -210,9 +210,10 @@ export default function Home() {
         {/* Header*/}
         <Flex w="100%" align={"center"} h="100px">
           <Flex paddingLeft={"20px"} align="center">
-            <Text as="b" fontSize={"4xl"} color={"white"}>
+            <Image h={"50px"} src="/logo.jpg" alt="logo" />
+            {/* <Text as="b" fontSize={"4xl"} color={"white"}>
               .base
-            </Text>
+            </Text> */}
             <Badge colorScheme="red" h="18px" marginLeft="8px">
               testnet
             </Badge>
@@ -309,8 +310,8 @@ export default function Home() {
                 )}
                 {!isConnected && (
                   <Text fontSize={"l"}>
-                    Please connect your wallet to claim your{" "}
-                    <Badge colorScheme="blue">{bns}.base</Badge> web3 name.
+                    Claim <Badge colorScheme="blue">{bns}.base</Badge> by
+                    connecting your wallet.
                   </Text>
                 )}
                 {isConnected && (
@@ -577,6 +578,7 @@ export default function Home() {
               {/* <Text color={"#fff"}>
                 {chain && <div>Connected to {chain.name}</div>}
               </Text> */}
+              {/* <Image h={"80px"} src="/logo.jpg" alt="logo" /> */}
               <Text as="b" fontSize="6xl" color={"#fff"}>
                 .base
               </Text>
