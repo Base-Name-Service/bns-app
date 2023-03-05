@@ -406,8 +406,10 @@ export default function Home() {
 
                 {switchNetwork && baseGoerli.id !== chain?.id && (
                   <Text fontSize={"l"}>
-                    Please swtich to {baseGoerli.name} network to claim your{" "}
-                    <Badge colorScheme="blue">{bns}.base</Badge> web3 name.
+                    You must switch to Base Goerli network to claim{" "}
+                    <Badge colorScheme="blue">{bns}.base</Badge>.
+                    {/* Please swtich to {baseGoerli.name} network to claim your{" "}
+                    <Badge colorScheme="blue">{bns}.base</Badge> web3 name. */}
                   </Text>
                 )}
               </Flex>
