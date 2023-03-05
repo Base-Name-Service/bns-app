@@ -210,17 +210,17 @@ export default function Home() {
         {/* Header*/}
         <Flex w="100%" align={"center"} h="100px">
           <Flex paddingLeft={"20px"} align="center">
-            <Image h={"50px"} src="/logo.jpg" alt="logo" />
+            {/* <Image h={"50px"} src="/logo.jpg" alt="logo" /> */}
             {/* <Text as="b" fontSize={"4xl"} color={"white"}>
               .base
             </Text> */}
-            <Badge colorScheme="red" h="18px" marginLeft="8px">
+            {/* <Badge colorScheme="red" h="18px" marginLeft="8px">
               testnet
-            </Badge>
+            </Badge> */}
           </Flex>
           <Spacer />
           <Flex paddingRight={"20px"}>
-            {!isConnected && (
+            {/* {!isConnected && (
               <Button
                 borderRadius={"12px"}
                 size="lg"
@@ -234,7 +234,7 @@ export default function Home() {
               >
                 Connect Wallet
               </Button>
-            )}
+            )} */}
 
             {isConnected && (
               <Flex>
@@ -244,7 +244,7 @@ export default function Home() {
                   borderRadius={"12px"}
                   padding="8px"
                   align={"center"}
-                  onClick={() => disconnect()}
+                  // onClick={() => disconnect()}
                   bg="#1b1b1c"
                 >
                   <Avatar
@@ -270,9 +270,9 @@ export default function Home() {
             backdropFilter="blur(10px) hue-rotate(10deg)"
           />
           <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
-            <ModalHeader>Connect Wallet</ModalHeader>
+            {/* <ModalHeader>Connect Wallet</ModalHeader> */}
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody marginTop={"25px"}>
               <Flex w={"100%"} direction="column">
                 {isConnected && (
                   <Flex
@@ -309,16 +309,16 @@ export default function Home() {
                   </Flex>
                 )}
                 {!isConnected && (
-                  <Text fontSize={"l"}>
+                  <Text fontSize={"xl"} align={"center"}>
                     Claim <Badge colorScheme="blue">{bns}.base</Badge> by
                     connecting your wallet.
                   </Text>
                 )}
                 {isConnected && (
                   <Flex>
-                    <Text fontSize={"l"} marginLeft="5px">
+                    <Text align={"center"} fontSize={"xl"} marginLeft="5px">
                       {address?.slice(0, 6)}...{address?.slice(-4)} wallet is
-                      connected. Please close the modal to continue.
+                      connected. Exit this window and click on 'Claim' again.
                       {/* Thanks for connecPlease connect your wallet to claim your{" "}
                     <Badge colorScheme="blue">{bns}.base</Badge> web3 name. */}
                     </Text>
@@ -358,9 +358,9 @@ export default function Home() {
             backdropFilter="blur(10px) hue-rotate(10deg)"
           />
           <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
-            <ModalHeader>Switch Network</ModalHeader>
+            {/* <ModalHeader>Switch Network</ModalHeader> */}
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody marginTop={"25px"}>
               <Flex w={"100%"} direction="column">
                 {switchNetwork && baseGoerli.id === chain?.id && (
                   <Flex
@@ -398,14 +398,14 @@ export default function Home() {
                 )}
 
                 {switchNetwork && baseGoerli.id === chain?.id && (
-                  <Text fontSize={"l"}>
-                    Switched to {baseGoerli.name} network. Pleaes close the
-                    modal to continue.
+                  <Text align={"center"} fontSize={"xl"}>
+                    Switched to {baseGoerli.name} network. Exit this window and
+                    click on 'Claim' again.
                   </Text>
                 )}
 
                 {switchNetwork && baseGoerli.id !== chain?.id && (
-                  <Text fontSize={"l"}>
+                  <Text align={"center"} fontSize={"l"}>
                     You must switch to Base Goerli network to claim{" "}
                     <Badge colorScheme="blue">{bns}.base</Badge>.
                     {/* Please swtich to {baseGoerli.name} network to claim your{" "}
@@ -434,21 +434,6 @@ export default function Home() {
                 >
                   Switch to {baseGoerli.name}
                 </Button>
-
-                {/* <Button
-                  // disabled={!switchNetwork || baseGoerli.id === chain?.id}
-                  key={baseGoerli.id}
-                  onClick={() => {
-                    console.log(baseGoerli.id);
-                    switchNetwork?.(baseGoerli.id);
-                  }}
-                >
-                  Switch to {baseGoerli.name}
-                  {isLoading &&
-                    pendingChainId === baseGoerli.id &&
-                    " (switching)"}
-                </Button> */}
-                <Spacer />
               </Flex>
             </ModalFooter>
           </ModalContent>
@@ -468,9 +453,9 @@ export default function Home() {
           // backdropFilter="blur(3px) hue-rotate(10deg)"
           />
           <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
-            <ModalHeader>Congrats</ModalHeader>
+            {/* <ModalHeader>Yay!</ModalHeader> */}
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody marginTop={"20px"}>
               <Flex w={"100%"} direction="column">
                 <Flex
                   w={"100%"}
@@ -488,7 +473,7 @@ export default function Home() {
                     borderRadius="full"
                   >
                     <Flex
-                      bg="#0f0f0f"
+                      bg="#000"
                       // opacity="0.9"
                       w="100px"
                       h={"100px"}
@@ -496,16 +481,19 @@ export default function Home() {
                       align={"center"}
                       justify="center"
                     >
-                      <Text fontSize={"4xl"}>🎉</Text>
+                      {/* <Text fontSize={"4xl"}>🎉</Text> */}
+                      <Image h={"60px"} src="/yay.png" alt="Base" />
                     </Flex>
                   </Flex>
                 </Flex>
-                <Text fontSize={"l"}>
-                  Congratulations for claiming your{" "}
-                  <Badge colorScheme="blue">{bns}.base</Badge> web3 name.
-                  {/* Please swtich to {baseGoerli.name} network to claim your{" "}
-                  <Badge colorScheme="blue">{bns}.base</Badge> web3 name. */}
-                </Text>
+                <Flex align={"center"} w="100%" direction={"column"}>
+                  <Text as="b" fontSize={"3xl"}>
+                    Yay!
+                  </Text>
+                  <Text fontSize={"xl"}>
+                    You claimed <Badge colorScheme="blue">{bns}.base</Badge>
+                  </Text>
+                </Flex>
               </Flex>
             </ModalBody>
 
@@ -531,34 +519,6 @@ export default function Home() {
                     View Transaction
                   </Button>
                 </Link>
-                {/* <Button
-                  variant={"outline"}
-                  borderRadius={"12px"}
-                  size="lg"
-                  // background={"#2548e5"}
-                  // color="white"
-                  onClick={onClaimCongratsModalClose}
-                  _hover={{
-                    backgroundColor: "#2d55fa",
-                    color: "#fff",
-                  }}
-                >
-                  Close
-                </Button> */}
-
-                {/* <Button
-                  // disabled={!switchNetwork || baseGoerli.id === chain?.id}
-                  key={baseGoerli.id}
-                  onClick={() => {
-                    console.log(baseGoerli.id);
-                    switchNetwork?.(baseGoerli.id);
-                  }}
-                >
-                  Switch to {baseGoerli.name}
-                  {isLoading &&
-                    pendingChainId === baseGoerli.id &&
-                    " (switching)"}
-                </Button> */}
                 <Spacer />
               </Flex>
             </ModalFooter>
@@ -580,10 +540,10 @@ export default function Home() {
               {/* <Text color={"#fff"}>
                 {chain && <div>Connected to {chain.name}</div>}
               </Text> */}
-              {/* <Image h={"80px"} src="/logo.jpg" alt="logo" /> */}
-              <Text as="b" fontSize="6xl" color={"#fff"}>
+              <Image h={"80px"} src="/logo.jpg" alt="logo" />
+              {/* <Text as="b" fontSize="6xl" color={"#fff"}>
                 .base
-              </Text>
+              </Text> */}
               <Flex w={"100%"}>
                 <InputGroup size="lg">
                   <InputLeftElement pointerEvents="none">
@@ -613,16 +573,19 @@ export default function Home() {
               </Flex>
 
               {/* errors */}
-              <Flex direction={"column"} w="100%">
-                {validationBnsErrors.map((error, index) => (
-                  <Flex key={index} align="center">
-                    <Icon as={WarningTwoIcon} color={"yellow.500"} />
-                    <Text color={"yellow.500"} marginLeft="5px">
-                      {error}
-                    </Text>
-                  </Flex>
-                ))}
-              </Flex>
+              {validationBnsErrors && validationBnsErrors.length > 0 && (
+                <Flex direction={"column"} w="100%">
+                  {validationBnsErrors.map((error, index) => (
+                    <Flex key={index} align="center">
+                      <Icon as={WarningTwoIcon} color={"yellow.500"} />
+                      <Text color={"yellow.500"} marginLeft="5px">
+                        {error}
+                      </Text>
+                    </Flex>
+                  ))}
+                </Flex>
+              )}
+
               {/* isBnsAvailable true */}
               {bns && showClaim && isBnsAvailable && (
                 <Flex direction={"column"} w="100%" align={"center"}>
