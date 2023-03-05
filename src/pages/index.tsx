@@ -53,8 +53,8 @@ import { InjectedConnector } from "wagmi/connectors/injected";
 const namehash = require("@ensdomains/eth-ens-namehash");
 import { ethers } from "ethers";
 import { baseGoerli } from "wagmi/chains";
-import { bnsRegistryABI } from "./abi/bnsRegistryABI";
-import { bnsRegistrarABI } from "./abi/bnsRegistrarABI";
+import { bnsRegistryABI } from "../abi/bnsRegistryABI";
+import { bnsRegistrarABI } from "../abi/bnsRegistrarABI";
 
 export default function Home() {
   const [bns, setBNS] = useState("");

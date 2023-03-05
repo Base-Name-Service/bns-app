@@ -15,7 +15,7 @@ const wagmiClient = createClient({
   provider,
 });
 
-import theme from "./theme";
+import theme from "../theme";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
