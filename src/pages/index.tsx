@@ -541,7 +541,7 @@ export default function Home() {
               {/* <Text color={"#fff"}>
                 {chain && <div>Connected to {chain.name}</div>}
               </Text> */}
-              <Image h={"80px"} src="/logo.jpg" alt="logo" />
+              <Image h={"100px"} src="/logo.jpg" alt="logo" />
               {/* <Text as="b" fontSize="6xl" color={"#fff"}>
                 .base
               </Text> */}
