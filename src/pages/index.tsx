@@ -269,7 +269,13 @@ export default function Home() {
             bg="none"
             backdropFilter="blur(10px) hue-rotate(10deg)"
           />
-          <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
+          <ModalContent
+            color="white"
+            bg="#1b1b1c"
+            borderRadius={"12px"}
+            marginRight={"20px"}
+            marginLeft={"20px"}
+          >
             {/* <ModalHeader>Connect Wallet</ModalHeader> */}
             <ModalCloseButton />
             <ModalBody marginTop={"25px"}>
@@ -358,7 +364,13 @@ export default function Home() {
             bg="none"
             backdropFilter="blur(10px) hue-rotate(10deg)"
           />
-          <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
+          <ModalContent
+            color="white"
+            bg="#1b1b1c"
+            borderRadius={"12px"}
+            marginRight={"20px"}
+            marginLeft={"20px"}
+          >
             {/* <ModalHeader>Switch Network</ModalHeader> */}
             <ModalCloseButton />
             <ModalBody marginTop={"25px"}>
@@ -453,7 +465,13 @@ export default function Home() {
           // bg="none"
           // backdropFilter="blur(3px) hue-rotate(10deg)"
           />
-          <ModalContent color="white" bg="#1b1b1c" borderRadius={"12px"}>
+          <ModalContent
+            color="white"
+            bg="#1b1b1c"
+            borderRadius={"12px"}
+            marginRight={"20px"}
+            marginLeft={"20px"}
+          >
             {/* <ModalHeader>Yay!</ModalHeader> */}
             <ModalCloseButton />
             <ModalBody marginTop={"20px"}>
@@ -607,9 +625,10 @@ export default function Home() {
                       borderLeftRadius={"12px"}
                       bg="#0052FF"
                     ></Flex>
-                    <Flex w={"100%"} paddingEnd={"10px"} marginStart="10px">
+                    <Flex paddingEnd={"10px"} marginStart="10px">
                       <Text as={"b"}>{bns}.base</Text>
                     </Flex>
+                    <Spacer />
                     <Button
                       // isDisabled
                       isLoading={isClaiming}
